@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гетманец Ганна - Профессиональная коррекция бровей</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        
+        .contact-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+    <!-- Навигация -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="font-playfair text-2xl font-bold gradient-text">МБ</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors">О себе</a>
+                    <a href="#services" class="text-gray-700 hover:text-purple-600 transition-colors">Услуги</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-purple-600 transition-colors">Работы</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors">Контакты</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Мобильное меню -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-purple-600">О себе</a>
+                <a href="#services" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Услуги</a>
+                <a href="#portfolio" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Работы</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Контакты</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero секция -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50 pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <div class="mb-8">
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                    <img src="https://picsum.photos/seed/eyebrow-specialist/200/200.jpg" alt="Мария" class="w-full h-full object-cover">
+                </div>
+                <h1 class="font-playfair text-4xl md:text-6xl font-bold text-gray-800 mb-4">
+                    Гетманец Ганна
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-6">
+                    Профессиональная коррекция и оформление бровей
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm">5+ лет опыта</span>
+                    <span class="px-4 py-2 bg-pink-100 text-pink-700 rounded-full text-sm">1000+ клиентов</span>
+                    <span class="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm">Сертифицированный мастер</span>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="contact-btn hero-gradient text-white px-8 py-3 rounded-full font-medium shadow-lg">
+                    Записаться на консультацию
+                </a>
+                <a href="#services" class="contact-btn border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-full font-medium hover:bg-purple-50">
+                    Посмотреть услуги
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- О себе -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold text-gray-800 mb-4">О себе</h2>
+                <div class="w-20 h-1 hero-gradient mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://picsum.photos/seed/eyebrow-work/600/400.jpg" alt="Работа мастера" class="rounded-lg shadow-lg">
+                </div>
+                <div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Привет! Я Мария, и уже более 5 лет помогаю женщинам подчеркивать их естественную красоту через идеальное оформление бровей. Для меня брови — это не просто линия на лице, а гармония и уверенность.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Я постоянно совершенствую свое мастерство, проходя обучение у лучших специалистов России и Европы. Использую только качественные материалы и индивидуальный подход к каждому клиенту.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center p-4 bg-purple-50 rounded-lg">
+                            <i class="fas fa-award text-purple-600 text-2xl mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">Сертификаты</h4>
+                            <p class="text-sm text-gray-600">Международные дипломы</p>
+                        </div>
+                        <div class="text-center p-4 bg-pink-50 rounded-lg">
+                            <i class="fas fa-heart text-pink-600 text-2xl mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">Подход</h4>
+                            <p class="text-sm text-gray-600">Индивидуальный и заботливый</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold text-gray-800 mb-4">Услуги</h2>
+                <div class="w-20 h-1 hero-gradient mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-white rounded-lg p-6 shadow-md">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-cut text-purple-600 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Коррекция бровей</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Профессиональная коррекция формы, удаление лишних волосков, создание идеальной линии</p>
+                    <div class="text-center">
+                        <span class="text-2xl font-bold text-purple-600">1 500 ₽</span>
+                    </div>
+                </div>
+                <div class="card-hover bg-white rounded-lg p-6 shadow-md">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-paint-brush text-pink-600 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Окрашивание</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Качественное окрашивание краской или хной с учетом цветотипа и желаний</p>
+                    <div class="text-center">
+                        <span class="text-2xl font-bold text-pink-600">1 200 ₽</span>
+                    </div>
+                </div>
+                <div class="card-hover bg-white rounded-lg p-6 shadow-md">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-magic text-indigo-600 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Комплекс</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Полный комплекс: коррекция + окрашивание + оформление воском</p>
+                    <div class="text-center">
+                        <span class="text-2xl font-bold text-indigo-600">2 500 ₽</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold text-gray-800 mb-4">Мои работы</h2>
+                <div class="w-20 h-1 hero-gradient mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="relative overflow-hidden rounded-lg shadow-md card-hover">
+                    <img src="https://picsum.photos/seed/brows1/400/400.jpg" alt="Работа 1" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white opacity-0 hover:opacity-100 transition-opacity">До/После</span>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-lg shadow-md card-hover">
+                    <img src="https://picsum.photos/seed/brows2/400/400.jpg" alt="Работа 2" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white opacity-0 hover:opacity-100 transition-opacity">До/После</span>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-lg shadow-md card-hover">
+                    <img src="https://picsum.photos/seed/brows3/400/400.jpg" alt="Работа 3" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white opacity-0 hover:opacity-100 transition-opacity">До/После</span>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-lg shadow-md card-hover">
+                    <img src="https://picsum.photos/seed/brows4/400/400.jpg" alt="Работа 4" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white opacity-0 hover:opacity-100 transition-opacity">До/После</span>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-lg shadow-md card-hover">
+                    <img src="https://picsum.photos/seed/brows5/400/400.jpg" alt="Работа 5" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white opacity-0 hover:opacity-100 transition-opacity">До/После</span>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-lg shadow-md card-hover">
+                    <img src="https://picsum.photos/seed/brows6/400/400.jpg" alt="Работа 6" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white opacity-0 hover:opacity-100 transition-opacity">До/После</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold text-gray-800 mb-4">Запись на процедуру</h2>
+                <div class="w-20 h-1 hero-gradient mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Свяжитесь со мной</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-phone text-purple-600 text-xl w-6"></i>
+                            <div>
+                                <p class="font-medium text-gray-800">Телефон</p>
+                                <p class="text-gray-600">+7 (999) 123-45-67</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-envelope text-purple-600 text-xl w-6"></i>
+                            <div>
+                                <p class="font-medium text-gray-800">Email</p>
+                                <p class="text-gray-600">maria.brows@example.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fab fa-telegram text-purple-600 text-xl w-6"></i>
+                            <div>
+                                <p class="font-medium text-gray-800">Telegram</p>
+                                <p class="text-gray-600">@maria_brows_master</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-map-marker-alt text-purple-600 text-xl w-6"></i>
+                            <div>
+                                <p class="font-medium text-gray-800">Адрес</p>
+                                <p class="text-gray-600">г. Москва, ул. Красная, 1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-800 mb-4">Время работы</h4>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <p class="text-gray-600">Пн-Пт: 10:00 - 20:00</p>
+                            <p class="text-gray-600">Сб: 10:00 - 18:00</p>
+                            <p class="text-gray-600">Вс: выходной</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Форма записи</h3>
+                    <form id="contact-form" class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2" for="name">
+                                Ваше имя *
+                            </label>
+                            <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" 
+                                   id="name" name="name" required type="text">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2" for="phone">
+                                Телефон *
+                            </label>
+                            <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" 
+                                   id="phone" name="phone" required type="tel" placeholder="+7 (999) 123-45-67">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2" for="service">
+                                Выбранная услуга
+                            </label>
+                            <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" 
+                                    id="service" name="service">
+                                <option value="">Выберите услугу</option>
+                                <option value="correction">Коррекция бровей</option>
+                                <option value="coloring">Окрашивание</option>
+                                <option value="complex">Комплекс</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2" for="preferred-date">
+                                Желаемая дата и время
+                            </label>
+                            <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" 
+                                   id="preferred-date" name="preferred-date" type="datetime-local">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2" for="contact-method">
+                                Предпочтительный способ связи
+                            </label>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="radio" name="contact-method" value="phone" class="mr-2" checked>
+                                    <span class="text-gray-700">Телефон</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="contact-method" value="telegram" class="mr-2">
+                                    <span class="text-gray-700">Telegram</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="contact-method" value="email" class="mr-2">
+                                    <span class="text-gray-700">Email</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-medium mb-2" for="message">
+                                Комментарий
+                            </label>
+                            <textarea class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" 
+                                      id="message" name="message" rows="3" placeholder="Дополнительная информация..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full hero-gradient text-white py-3 rounded-md font-medium hover:opacity-90 transition-opacity">
+                            Отправить заявку
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="mb-4">
+                    <span class="font-playfair text-2xl font-bold">МБ</span>
+                </div>
+                <p class="text-gray-400 mb-4">© 2024 Мария Бровист. Все права защищены.</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-telegram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Уведомление об успешной отправке -->
+    <div id="success-notification" class="fixed top-20 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle mr-2"></i>
+            <span>Заявка успешно отправлена!</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
