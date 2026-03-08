@@ -18,14 +18,22 @@
         }
         
         .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ff006e 0%, #ff4081 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
         .hero-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ff006e 0%, #ff4081 100%);
+        }
+        
+        .fuchsia-bg {
+            background: linear-gradient(135deg, #ff006e 0%, #ff4081 100%);
+        }
+        
+        .fuchsia-light-bg {
+            background: linear-gradient(135deg, #ffe0ec 0%, #ffc1e3 100%);
         }
         
         .card-hover {
@@ -44,6 +52,22 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes rocket {
+            0% { transform: translateX(0) translateY(0) rotate(0deg); }
+            25% { transform: translateX(10px) translateY(-5px) rotate(5deg); }
+            50% { transform: translateX(0) translateY(-10px) rotate(0deg); }
+            75% { transform: translateX(-10px) translateY(-5px) rotate(-5deg); }
+            100% { transform: translateX(0) translateY(0) rotate(0deg); }
+        }
+        
+        .rocket-animation {
+            animation: rocket 3s ease-in-out infinite;
+            display: inline-block;
+            margin-left: 15px;
+            color: #ff006e;
+            font-size: 0.8em;
         }
         
         .scroll-smooth {
@@ -90,7 +114,7 @@
     </nav>
 
     <!-- Hero секция -->
-    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50 pt-16">
+    <section class="min-h-screen flex items-center justify-center fuchsia-light-bg pt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
             <div class="mb-8">
                 <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg">
@@ -98,6 +122,7 @@
                 </div>
                 <h1 class="font-playfair text-4xl md:text-6xl font-bold text-gray-800 mb-4">
                     Гетманец Ганна
+                    <span class="rocket-animation">🚀</span>
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-600 mb-6">
                     Профессиональная коррекция и оформление бровей
@@ -109,10 +134,10 @@
                 </div>
             </div>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" class="contact-btn hero-gradient text-white px-8 py-3 rounded-full font-medium shadow-lg">
+                <a href="#contact" class="contact-btn fuchsia-bg text-white px-8 py-3 rounded-full font-medium shadow-lg">
                     Записаться на консультацию
                 </a>
-                <a href="#services" class="contact-btn border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-full font-medium hover:bg-purple-50">
+                <a href="#services" class="contact-btn border-2 border-pink-500 text-pink-600 px-8 py-3 rounded-full font-medium hover:bg-pink-50">
                     Посмотреть услуги
                 </a>
             </div>
@@ -245,7 +270,7 @@
     </section>
 
     <!-- Контакты -->
-    <section id="contact" class="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+    <section id="contact" class="py-20 fuchsia-light-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="font-playfair text-3xl md:text-4xl font-bold text-gray-800 mb-4">Запись на процедуру</h2>
